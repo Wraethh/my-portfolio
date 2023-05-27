@@ -40,6 +40,7 @@ export default function Presentation() {
       <button type="button" onClick={() => handleClick()}>
         See More
       </button>
+      <div className={startAnim === false ? styles.buttonBase : null}></div>
     </div>
   );
 }
