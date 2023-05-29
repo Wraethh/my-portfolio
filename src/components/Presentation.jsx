@@ -1,15 +1,18 @@
 import styles from "./Presentation.module.css";
 import profilepic from "../assets/profile-pic.png";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import GlobalContext from "../contexts/GlobalContext";
 
 export default function Presentation() {
+  const { startAnim, setStartAnim } = useContext(GlobalContext);
+
   const [openedModal, setOpenedModale] = useState(true);
-  const [startAnim, setStartAnim] = useState(false);
 
   const handleClick = () => {
     setStartAnim(true);
     setTimeout(() => {
       setOpenedModale(false);
+      setStartAnim(false);
     }, 1900);
   };
 
@@ -40,6 +43,7 @@ export default function Presentation() {
       <button type="button" onClick={() => handleClick()}>
         See More
       </button>
+      <div className={startAnim === false ? styles.buttonBase : null}></div>
     </div>
   );
 }
