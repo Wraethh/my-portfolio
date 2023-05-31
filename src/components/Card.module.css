@@ -1,0 +1,75 @@
+.cardContainer {
+    width: 25%;
+    height: 80%;
+    perspective: 1500px;
+}
+
+.cardContainer:hover > .card {
+    transform: rotateY(180deg);
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: 1000ms;
+    transform-style: preserve-3d;
+}
+
+.cardFront, .cardBack {
+    width: 100%;
+    height: 100%;
+    border-radius: 2.5px;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardFront {
+    background-color: var(--primary-color-darker);
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.cardFront img {
+    width: 20%;
+}
+
+.cardBack {
+    background-color: var(--secondary-color-darker);  
+    transform: rotateY(180deg);
+    padding: 1rem;
+}
+
+.content {
+    overflow-y: scroll;
+    cursor: grab;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.content > div {
+    margin-bottom: 2%;
+    
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    .cardContainer {
+        width: 80%;
+        height: 25%;
+    }
+
+    .cardContainer:hover > .card {
+        transform: rotateX(180deg);
+    }
+
+    .cardBack {
+        transform: rotateX(180deg);
+    }
+}

@@ -1,4 +1,14 @@
 .about {
     min-width: 100%;
-    height: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media screen and (max-aspect-ratio: 1/1){
+    .about {
+        flex-direction: column;
+    }
 }
