@@ -1,11 +1,15 @@
 import Card from "../components/Card";
 import styles from "./About.module.css";
+import experiences from "../assets/experiences.png";
+import education from "../assets/education.png";
+import skills from "../assets/skills.png";
 
 export default function About() {
   const infos = [
     {
       id: 1,
       title: "Experiences",
+      img: experiences,
       content: [
         {
           id: 1,
@@ -52,6 +56,7 @@ export default function About() {
     {
       id: 2,
       title: "Education",
+      img: education,
       content: [
         {
           id: 1,
@@ -82,6 +87,7 @@ export default function About() {
     {
       id: 3,
       title: "Skills",
+      img: skills,
       content: [
         {
           id: 1,

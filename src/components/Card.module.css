@@ -6,14 +6,13 @@
 
 .cardContainer:hover > .card {
     transform: rotateY(180deg);
-    /* box-shadow: 0 0 50px -10px var(--primary-color-light); */
 }
 
 .card {
     width: 100%;
     height: 100%;
     position: relative;
-    transition: transform 1000ms;
+    transition: 1000ms;
     transform-style: preserve-3d;
 }
 
@@ -21,7 +20,6 @@
     width: 100%;
     height: 100%;
     border-radius: 2.5px;
-    /* box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25); */
     position: absolute;
     backface-visibility: hidden;
     display: flex;
@@ -32,6 +30,11 @@
     background-color: var(--primary-color-darker);
     justify-content: center;
     align-items: center;
+    gap: 10%;
+}
+
+.cardFront img {
+    width: 20%;
 }
 
 .cardBack {
@@ -42,6 +45,7 @@
 
 .content {
     overflow-y: scroll;
+    cursor: grab;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
