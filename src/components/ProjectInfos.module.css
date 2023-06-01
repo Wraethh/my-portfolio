@@ -1,0 +1,12 @@
+.projectInfos {
+    width: 45%;
+    height: 90%;
+    background-color: blue;
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    .projectInfos {
+        width: 90%;
+        height: 45%;
+    }
+}
