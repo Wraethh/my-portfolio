@@ -64,7 +64,7 @@ export default function Contact() {
   };
 
   return (
-    <div className={styles.contact}>
+    <div className={styles.contact} id="contact">
       <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
         <div className={styles.leftPart}>
           <h2>Interested in a collaboration ?</h2>
