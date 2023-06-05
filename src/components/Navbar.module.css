@@ -9,7 +9,7 @@
     position: fixed;
 }
 
-.background div {
+.logo {
     width: 30px;
     height: 30px;
     position: relative;
@@ -18,7 +18,7 @@
     align-items: center;
 }
 
-.background div::before {
+.logo::before {
     content: '';
     border: 5px solid var(--dark-color);
     position: absolute;
@@ -28,18 +28,22 @@
     transform: rotate(45deg);
 }
 
-.background div:hover::before {
+.logo:hover::before {
     transform: rotate(0deg);
     transition: 0.5s ease;
 }
 
-.background img {
+.logo img {
     width: 20px;
     height: 20px;
 }
 
-.background ul {
-    width: 50%;
+.links {
+    min-width: 50%;
+}
+
+.links ul {
+    width: 100%;
     font-family: var(--action-font);
     display: flex;
     justify-content: space-evenly;
@@ -47,7 +51,10 @@
     gap: 10%;
 }
 
-.background ul li:hover {
+.background a {
+    color: var(--light-color);
+}
+
+.background a:hover {
     color: var(--dark-color);
-    cursor: pointer;
 }

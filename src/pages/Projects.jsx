@@ -78,7 +78,7 @@ export default function Projects() {
   // };
 
   return (
-    <div className={styles.projects}>
+    <div className={styles.projects} id="projects">
       {projectData.map((project) => (
         <Project key={project.id} {...project} handleClick={handleClick} />
       ))}

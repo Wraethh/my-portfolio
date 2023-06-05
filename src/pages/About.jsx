@@ -145,7 +145,7 @@ export default function About() {
   ];
 
   return (
-    <div className={styles.about}>
+    <div className={styles.about} id="about">
       <Card {...infos[0]} />
       <Card {...infos[1]} />
       <Card {...infos[2]} />
