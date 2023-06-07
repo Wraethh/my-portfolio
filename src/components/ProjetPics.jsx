@@ -14,6 +14,7 @@ export default function ProjetPics({ handleClick, ...project }) {
         {project.images.map((image) => (
           <img
             key={image.id}
+            role="button"
             src={image.src}
             onClick={handleClick}
             alt={`preview picture ${image.id} of ${project.title} project`}
