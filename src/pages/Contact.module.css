@@ -6,16 +6,14 @@
     align-items: center;
 }
 
-.form {
+.contact > div{
     width: 80%;
     height: 80%;
     background: linear-gradient(45deg, var(--primary-color-dark) 25%, var(--secondary-color-dark) 75%);
-    padding-block: 5%;
-    padding-inline: 5%;
-    display: flex;
+    padding: 5%;
 }
 
-.formNarrow {
+/*.formNarrow {
     width: 80%;
     height: 80%;
     background: linear-gradient(45deg, var(--primary-color-dark) 25%, var(--secondary-color-dark) 75%);
@@ -102,7 +100,7 @@
     bottom: -3px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-aspect-ratio: 1/1) {
     .form {
         height: 90%;
         flex-direction: column;
@@ -140,4 +138,4 @@
         margin-bottom: 5%;
     }
     
-}
+} */
