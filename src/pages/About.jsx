@@ -34,7 +34,7 @@ export default function About() {
         {
           id: 3,
           occupation: "Webmarketing assistant",
-          entity: "Tuto.entity",
+          entity: "Tuto.school",
           location: "Paris",
           type: "Internship",
           duration: "From March to April 2017",
