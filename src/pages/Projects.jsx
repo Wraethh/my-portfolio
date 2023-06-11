@@ -31,8 +31,14 @@ export default function Projects() {
       title: "Animalz",
       project: "animalz",
       duration: "36 hours",
-      description: "",
+      description: `Animalz is a project developped by four persons (including me) for a hackathon which took place towards the half of our formation. 
+        We had to create a proof of concept to answer a need around the theme of holidays. 
+        We decided to make an app where people could find travel buddies using a similar system as Fruitz but with animals, hence the name.
+        I did a bit of everything, but my part mainly focused around getting the calendar module working, calling the Pexel API to display images 
+        in addition of organizing pieces of information on the profile page using our custom json-server database alongside the random users API.`,
       stack: ["HTML", "CSS", "React", "Node", "API REST"],
+      link: "",
+      github: "https://github.com/Wraethh/Hackathon_JS_05_2023",
       displayedImage: displayedImg.animalz,
       images: [
         { id: 1, src: animalz1 },
@@ -45,8 +51,15 @@ export default function Projects() {
       title: "Tradin' Impact",
       project: "tradin",
       duration: "4 weeks",
-      description: "",
+      description: `The second project I've done during my formation. Once again it was a group project of 3 and the only constraint 
+        was to build something around an API of our choice using React.
+        We agreed on developping a trading game in which you could primarly buy or sell items, but also collect and fight !
+        It was our first time dealing with API and React so we struggled at first but in the end we learned how to make it work.
+        This project really made me progress since on top of API and React, we had to use quite a bit of algorithms for each of our
+        featured mini-games.`,
       stack: ["HTML", "CSS", "React", "Node", "API REST"],
+      link: "https://tradin-impact.netlify.app/",
+      github: "https://github.com/Wraethh/2023-02-JS-FT-Lyon-P2-TradinImpact",
       displayedImage: displayedImg.tradin,
       images: [
         { id: 1, src: tradin1 },
@@ -59,8 +72,14 @@ export default function Projects() {
       title: "Color Flipper",
       project: "color",
       duration: "1 day",
-      description: "",
+      description: `This was just a personal side project at first, but I found myself really getting into it and wanting to improve it
+        with my newfound javascript skills. Once the random hexadecimal color generator was done, I incorporated a function to determine if a color
+        was rather dark or light so that I could change the text color accordingly with accessibility in mind. I also developed a history
+        function to have access to the last 5 colors generated.
+        It was quite a fun project to work on to train my javascript functions and DOM manipulations skills !`,
       stack: ["HTML", "CSS", "Javascript"],
+      link: "https://wraethh.github.io/color_flipper/",
+      github: "https://github.com/Wraethh/color_flipper",
       displayedImage: displayedImg.color,
       images: [
         { id: 1, src: color1 },
@@ -73,8 +92,14 @@ export default function Projects() {
       title: "Gloomy",
       project: "gloomy",
       duration: "2 weeks",
-      description: "",
+      description: `This is the very first project I've done in my burgeoning developer career. We were a team of 3 people diving 
+        into the then unknown depths of javascript with our HTML and CSS skills. We had no real constraint apart from developing a
+        functional javascript application, so we decided to build a small calculator but with a twist : try and activate its dark mode
+        and you will suffer its bad mood ! In light mode, Gloomy is a perfeclty normal calculator, but in the dark mode version, 
+        the roles are switched and you are the one having to solve calculations through different mini-games.`,
       stack: ["HTML", "CSS", "Javascript"],
+      link: "https://wildcodeschool.github.io/2023-02-JS-FT-Lyon-P1-WildUnited/index.html",
+      github: "https://github.com/Wraethh/2023-02-JS-FT-Lyon-P1-WildUnited",
       displayedImage: displayedImg.gloomy,
       images: [
         { id: 1, src: gloomy1 },
