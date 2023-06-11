@@ -1,12 +1,78 @@
 .projectInfos {
     width: 45%;
     height: 90%;
-    background-color: blue;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2%;
+    overflow-x: auto;
+}
+
+.projectInfos ul {
+    display: flex;
+    column-gap: 10px;
+}
+
+.links {
+    position: fixed;
+    display: flex;
+    column-gap: 50px;
+    right: 8%;
+    bottom: 10%;
+}
+
+.github, .website {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.website img {
+    transform: translateY(2px);
+}
+
+.github img {
+    transform: translateX(-2px) translateY(2px);
+}
+
+.github::before, .website::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 4px solid var(--light-color);
+    transform: rotate(45deg);
+    transition: 0.5s ease;
+}
+
+.github:hover::before, .website:hover::before {
+    transform: rotate(0deg);
+    border: 4px solid var(--secondary-color-light);
+    transition: 0.5s ease;
 }
 
 @media screen and (max-aspect-ratio: 1/1) {
     .projectInfos {
         width: 90%;
         height: 45%;
+    }
+
+    .links {
+        right: 10%;
+        bottom: 8%;
+    }
+}
+
+@media screen and (max-aspect-ratio: 1/1) and (max-width: 600px) {
+    .links {
+        position:static;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-right: 20px;
+        column-gap: 50px;
     }
 }
