@@ -2,12 +2,14 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useContext } from "react";
+import emailjs from "@emailjs/browser";
+import { useContext, useRef } from "react";
 import GlobalContext from "../contexts/GlobalContext";
 import styles from "./Form.module.css";
 
 export default function Form() {
   const { startAnim, setStartAnim } = useContext(GlobalContext);
+  const form = useRef();
 
   const handleClick = () => {
     setStartAnim(true);
@@ -81,22 +83,45 @@ export default function Form() {
         .max(1000, "Message must be 1000 characters or less")
         .required("Message is required"),
     }),
+    // Send email and toast success
     onSubmit: () => {
-      toast.success("Message sent", {
-        className: styles.toastNotif,
-        position: toast.POSITION.BOTTOM_RIGHT,
-        icon: () => (
-          <div className={styles.iconSuccess}>
-            <span>✔</span>
-          </div>
-        ),
-      });
+      emailjs
+        .sendForm(
+          "contact_service",
+          "contact_form",
+          form.current,
+          "LHHKiG-xspn5WqYka"
+        )
+        .then(
+          () => {
+            toast.success("Message sent, thank you !", {
+              className: styles.toastNotif,
+              position: toast.POSITION.BOTTOM_RIGHT,
+              icon: () => (
+                <div className={styles.iconSuccess}>
+                  <span>✔</span>
+                </div>
+              ),
+            });
+          },
+          (error) => {
+            toast.error(`${error.text}`, {
+              className: styles.toastNotif,
+              position: toast.POSITION.BOTTOM_RIGHT,
+              icon: () => (
+                <div className={styles.iconError}>
+                  <span>!</span>
+                </div>
+              ),
+            });
+          }
+        );
     },
   });
 
   return (
     <>
-      <form className={styles.form} onSubmit={formik.handleSubmit}>
+      <form ref={form} className={styles.form} onSubmit={formik.handleSubmit}>
         <div className={styles.infos}>
           <h2>Interested in a collaboration ?</h2>
           <h3>Or you just want to send some kind words</h3>
