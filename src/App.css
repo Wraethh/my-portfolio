@@ -15,8 +15,9 @@ body {
     --secondary-color-light: #FF017E;
     --secondary-color-dark: #BE3C98;
     --secondary-color-darker: #aa0055;
+    --secondary-color-nav: #7e5889;
     --light-color: #FFDAFB;
-    --dark-color: #261E1A;
+    --dark-color: #1B0E39;
     /* toastify */
     --toastify-color-light: var(--light-color);
     --toastify-text-color-light: var(--dark-color);
